@@ -1,0 +1,108 @@
+table Calendar
+	lineageTag: 92fb90ad-8bc2-44c9-b055-3721703e9556
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: dd.mm.yyyy
+		lineageTag: a6573eff-b364-496a-a302-6b4acbe6127f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 3f7a66ff-8cb3-4210-a7bd-07f2d85899e8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 935e462a-2d26-4f5c-9b9b-a2e5ae271373
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearQuarter
+		lineageTag: c2a2f2fb-2e89-4c1e-9f75-009a8eb11317
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo
+		formatString: 0
+		lineageTag: ee64e41e-fa00-4f16-8409-a31827033442
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		lineageTag: ef07a5c3-2cfc-49ff-8115-c6609654a409
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+		sortByColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		lineageTag: 1114d371-fac5-4c90-a527-812bcb424e6c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNo
+		formatString: 0
+		lineageTag: b34c1041-4cb2-4deb-9be7-d5af874bd636
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayOfWeekNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		lineageTag: 7b9e0656-c314-4102-a9c1-512d1670690d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayOfWeek]
+		sortByColumn: DayOfWeekNo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source =
+				
+				VAR MinDate = MIN('bikeshare_trips'[start_date])
+				VAR MaxDate = MAX('bikeshare_trips'[start_date])
+				RETURN
+				ADDCOLUMNS (
+				    CALENDAR(MinDate, MaxDate),
+				    "Year", YEAR([Date]),
+				    "Quarter", "Q" & FORMAT([Date], "Q"),
+				    "YearQuarter", YEAR([Date]) & "-Q" & FORMAT([Date], "Q"),
+				    "MonthNo", MONTH([Date]),
+				    "MonthName", FORMAT([Date], "MMM"),
+				    "YearMonth", FORMAT([Date], "YYYY-MM"),
+				    "DayOfWeekNo", WEEKDAY([Date], 2),
+				    "DayOfWeek", FORMAT([Date], "dddd")
+				)
+
+	annotation PBI_Id = ae123c53e01c4761b2b85fa4a63d3d3b
+

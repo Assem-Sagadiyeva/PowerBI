@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 346,
+            "y": 0
+          },
+          "nodeIndex": "bikeshare_regions",
+          "nodeLineageTag": "89cc6a87-d2bc-4ae5-8956-e7346f111698",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -25
+          },
+          "nodeIndex": "bikeshare_station_info",
+          "nodeLineageTag": "1e6e696e-ca03-459c-9f12-114ceaa2e63c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 602,
+            "y": 0
+          },
+          "nodeIndex": "bikeshare_trips",
+          "nodeLineageTag": "03a24dfe-59c3-4a9f-8e23-d475b9b26e91",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 329.99999618530273,
+            "y": 255.5
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "92fb90ad-8bc2-44c9-b055-3721703e9556",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 47.999996185302734,
+            "y": 353.25
+          },
+          "nodeIndex": "Меры",
+          "nodeLineageTag": "5ba085dc-9454-494e-9d3c-a7613dd61cd6",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "Все таблицы",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Все таблицы",
+  "defaultDiagram": "Все таблицы"
+}

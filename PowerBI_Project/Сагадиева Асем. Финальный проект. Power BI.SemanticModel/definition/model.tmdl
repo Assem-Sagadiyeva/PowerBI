@@ -1,0 +1,25 @@
+model Model
+	culture: ru-RU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ru-KZ
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["bikeshare_regions","bikeshare_station_info","bikeshare_trips","Меры"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table bikeshare_regions
+ref table bikeshare_station_info
+ref table bikeshare_trips
+ref table DateTableTemplate_e33abe6d-8efb-46fc-9788-585e5cf7afc5
+ref table LocalDateTable_27c825da-4176-43bf-a01e-0c0b00f3213a
+ref table Calendar
+ref table Меры
+
+ref cultureInfo ru-RU
+

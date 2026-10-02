@@ -1,0 +1,107 @@
+table Меры
+	lineageTag: 5ba085dc-9454-494e-9d3c-a7613dd61cd6
+
+	measure 'Total Trips' = COUNTROWS('bikeshare_trips')
+		formatString: #,0
+		lineageTag: fd2d8b50-6501-43f4-baa8-a21eb671be30
+
+	measure 'Subscriber Trips' =
+			
+			CALCULATE(
+			    [Total Trips],
+			    'bikeshare_trips'[subscriber_type] = "Subscriber"
+			)
+		formatString: #,0
+		lineageTag: ee1cf373-eec0-4d3d-911c-38d2925e2b34
+
+	measure 'Customer Trips' =
+			
+			CALCULATE(
+			    [Total Trips],
+			    'bikeshare_trips'[subscriber_type] = "Customer"
+			)
+		formatString: #,0
+		lineageTag: 83dfd228-c025-43f5-989f-789b430643be
+
+	measure 'Avg Duration Min' = AVERAGE('bikeshare_trips'[duration_sec]) / 60
+		formatString: #,0.00
+		lineageTag: 822a9463-a1a9-4415-a2f2-a3a367dc27cf
+
+	measure 'Bike Share For All %' =
+			
+			DIVIDE(
+			    CALCULATE([Total Trips], 'bikeshare_trips'[bike_share_for_all_trip] = "Yes"),
+			    [Total Trips],
+			    0
+			)
+		lineageTag: a6ada4f5-32b9-47dd-b323-8dd87fa3d5a5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Trips MoM Growth %' =
+			
+			VAR CurrentTrips = [Total Trips]
+			VAR PreviousMonthTrips = CALCULATE([Total Trips], DATEADD('Calendar'[Date], -1, MONTH))
+			RETURN
+			DIVIDE(CurrentTrips - PreviousMonthTrips, PreviousMonthTrips)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: fd0348f6-7fb2-40f4-9e81-0ded0cb913fa
+
+	measure 'Trips QoQ Growth %' =
+			
+			VAR CurrentTrips = [Total Trips]
+			VAR PreviousQuarterTrips = CALCULATE([Total Trips], DATEADD('Calendar'[Date], -1, QUARTER))
+			RETURN
+			DIVIDE(CurrentTrips - PreviousQuarterTrips, PreviousQuarterTrips)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9a14892a-5530-4f11-a5ba-74066012b257
+
+	measure 'Trips YoY Growth %' =
+			
+			VAR CurrentTrips = [Total Trips]
+			VAR LastYearTrips = CALCULATE([Total Trips], SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			DIVIDE(CurrentTrips - LastYearTrips, LastYearTrips)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b6ef74cc-0450-474e-b940-f9b53748da87
+
+	measure 'Total Duration Hours' = SUM('bikeshare_trips'[duration_sec]) / 3600
+		lineageTag: 957b6064-c324-4205-a7cd-ebbeb6b9adb1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Daily Trips' = AVERAGEX(VALUES('Calendar'[Date]), [Total Trips])
+		formatString: #,0.00
+		lineageTag: f2b94ae7-2b87-4553-8745-e2164f902b00
+
+	measure 'Utilization Rate' = ```
+			
+			DIVIDE(
+			    [Total Trips], 
+			    SUM(bikeshare_station_info[capacity]), 
+			    0
+			)
+			```
+		formatString: #,0.00
+		lineageTag: 5825a5c8-35ad-4964-a706-8c1327c9aaa2
+
+	measure 'Blank Trips' =
+			
+			CALCULATE(
+			    [Total Trips],
+			    ISBLANK(bikeshare_trips[subscriber_type]) || bikeshare_trips[subscriber_type] = "nan"
+			)
+		formatString: #,0
+		lineageTag: 48e8534d-7eda-4dc3-8502-ff243e3d7207
+
+	partition Меры = m
+		mode: import
+		source =
+				let
+				  Источник = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Столбец 1" = _t]),
+				    #"Удаленные столбцы" = Table.RemoveColumns(Источник,{"Столбец 1"})
+				in
+				  #"Удаленные столбцы"
+
+	annotation PBI_ResultType = Table
+

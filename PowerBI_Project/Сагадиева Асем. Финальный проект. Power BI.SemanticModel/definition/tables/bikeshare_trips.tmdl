@@ -1,0 +1,254 @@
+table bikeshare_trips
+	lineageTag: 03a24dfe-59c3-4a9f-8e23-d475b9b26e91
+
+	column trip_id
+		dataType: string
+		lineageTag: 7bc67593-b26b-48dd-be9e-0059f2f04e39
+		summarizeBy: none
+		sourceColumn: trip_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration_sec
+		dataType: int64
+		formatString: 0
+		lineageTag: af5397fe-ed2e-4e81-8845-cdcbac15c779
+		summarizeBy: sum
+		sourceColumn: duration_sec
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 3aff7f91-6962-4d0c-901b-b82233d99e16
+		summarizeBy: none
+		sourceColumn: start_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column start_station_name
+		dataType: string
+		lineageTag: b402cd91-7cc1-460e-b5d2-644102537fed
+		summarizeBy: none
+		sourceColumn: start_station_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_station_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e254df1e-b3a1-44b3-9fc4-b13dcff289b9
+		summarizeBy: none
+		sourceColumn: start_station_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_date
+		dataType: dateTime
+		formatString: dd.mm.yyyy
+		lineageTag: e65f7791-2461-43e3-b564-2ee3883a4fb1
+		summarizeBy: none
+		sourceColumn: end_date
+
+		variation Изменение
+			isDefault
+			relationship: 9267caa2-f9b4-4545-ae28-200404edc85f
+			defaultHierarchy: LocalDateTable_27c825da-4176-43bf-a01e-0c0b00f3213a.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column end_station_name
+		dataType: string
+		lineageTag: c8aed322-35ef-4888-8180-abe36ebcdeb9
+		summarizeBy: none
+		sourceColumn: end_station_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_station_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 23767800-b946-497b-a4c7-27eb9b0255e2
+		summarizeBy: sum
+		sourceColumn: end_station_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column bike_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dc24328-b487-4c57-9e0b-1ef19ad7eaa4
+		summarizeBy: sum
+		sourceColumn: bike_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column subscriber_type
+		dataType: string
+		lineageTag: 8b1ecc60-9261-427d-b054-04a661ae65be
+		summarizeBy: none
+		sourceColumn: subscriber_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_station_latitude
+		dataType: double
+		lineageTag: 5cc077d1-1f89-431a-b60c-3dced7f31a37
+		summarizeBy: sum
+		sourceColumn: start_station_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column start_station_longitude
+		dataType: double
+		lineageTag: 103a267c-9227-48fd-b9da-acff4898b7f1
+		summarizeBy: sum
+		sourceColumn: start_station_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column end_station_latitude
+		dataType: double
+		lineageTag: 993333cc-36ad-4e3a-84d9-746437f3ddea
+		summarizeBy: sum
+		sourceColumn: end_station_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column end_station_longitude
+		dataType: double
+		lineageTag: d2697db7-71cd-43ec-9017-13dd0011165f
+		summarizeBy: sum
+		sourceColumn: end_station_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column member_birth_year
+		dataType: double
+		formatString: 0
+		lineageTag: 1e779488-2992-4198-9919-48b012db5492
+		summarizeBy: sum
+		sourceColumn: member_birth_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_gender
+		dataType: string
+		lineageTag: 56bc3377-420a-4dd3-86bf-75cc7cf2dce9
+		summarizeBy: none
+		sourceColumn: member_gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column bike_share_for_all_trip
+		dataType: string
+		lineageTag: d0d9e76b-ff0c-4784-b2da-44fa688b55e0
+		summarizeBy: none
+		sourceColumn: bike_share_for_all_trip
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_station_geom
+		dataType: string
+		lineageTag: 1261d364-250a-4289-8cc4-4123e499fe53
+		summarizeBy: none
+		sourceColumn: start_station_geom
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_station_geom
+		dataType: string
+		lineageTag: 29104710-815a-4a77-8e94-b8bcff6db102
+		summarizeBy: none
+		sourceColumn: end_station_geom
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Hour'
+		dataType: int64
+		formatString: 0
+		lineageTag: e037fbed-11ce-4c62-b549-aff11ab6edc8
+		summarizeBy: sum
+		sourceColumn: Start Hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth_Trip = FORMAT('bikeshare_trips'[start_date], "yyyy-mm")
+		lineageTag: cf5c9f2d-bb2c-4955-8e38-d24a60fd872d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Trip = YEAR('bikeshare_trips'[start_date])
+		formatString: 0
+		lineageTag: 13910746-7b81-43d3-b1bd-4a85bfb3c33f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Время суток' = ```
+			
+			VAR h = 'bikeshare_trips'[Start Hour]
+			RETURN 
+			SWITCH(
+			    TRUE(),
+			    h >= 6 && h < 12, "1. Утро (06:00-12:00)",
+			    h >= 12 && h < 17, "2. День (12:00-17:00)",
+			    h >= 17 && h < 22, "3. Вечер (17:00-22:00)",
+			    "4. Ночь (22:00-06:00)"
+			)
+			```
+		lineageTag: ce180e4d-bee9-476b-b0d2-d38e3b935230
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Возрастная группа'
+		dataType: string
+		lineageTag: 454a5712-5b37-4c3c-b492-9460ab9511a0
+		summarizeBy: none
+		sourceColumn: Возрастная группа
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bikeshare_trips = m
+		mode: import
+		source =
+				let
+				    Источник = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"bigquery-public-data_Database" = Источник{[Name="bigquery-public-data",Kind="Database"]}[Data],
+				    san_francisco_bikeshare_Schema = #"bigquery-public-data_Database"{[Name="san_francisco_bikeshare",Kind="Schema"]}[Data],
+				    bikeshare_trips_Table = san_francisco_bikeshare_Schema{[Name="bikeshare_trips",Kind="Table"]}[Data],
+				  #"Удаленные столбцы" = Table.RemoveColumns(bikeshare_trips_Table, {"zip_code", "c_subscription_type"}),
+				  #"Вставленный час" = Table.AddColumn(#"Удаленные столбцы", "Час", each Time.Hour([start_date]), type nullable Int64.Type),
+				  #"Переименованные столбцы" = Table.RenameColumns(#"Вставленный час", {{"Час", "Start Hour"}}),
+				  #"Измененный тип столбца" = Table.TransformColumnTypes(#"Переименованные столбцы", {{"start_date", type date}, {"end_date", type date}}),
+				  #"Замененное значение" = Table.ReplaceValue(#"Измененный тип столбца", null, "Не указано", Replacer.ReplaceValue, {"member_gender"}),
+				  #"Замененное значение 1" = Table.ReplaceValue(#"Замененное значение", "Male", "Мужчина", Replacer.ReplaceText, {"member_gender"}),
+				  #"Замененное значение 2" = Table.ReplaceValue(#"Замененное значение 1", "Female", "Женщина", Replacer.ReplaceText, {"member_gender"}),
+				  #"Замененное значение 3" = Table.ReplaceValue(#"Замененное значение 2", "Other", "Другие", Replacer.ReplaceValue, {"member_gender"}),
+				  #"Замененное значение 4" = Table.ReplaceValue(#"Замененное значение 3", null, "Не указано", Replacer.ReplaceValue, {"member_gender"}),
+				  #"Замененное значение 5" = Table.ReplaceValue(#"Замененное значение 4", null, 0, Replacer.ReplaceValue, {"member_birth_year"}),
+				  #"Вставленный условный столбец" = Table.AddColumn(#"Замененное значение 5", "Возрастная группа", each if [member_birth_year] < 1966 then "60+ лет / Не указано" else if [member_birth_year] < 1981 then "46–60 лет" else if [member_birth_year] < 1991 then "36–45 лет" else if [member_birth_year] < 2001 then "26–35 лет" else "До 25 лет")
+				in
+				    #"Вставленный условный столбец"
+
+	annotation PBI_ResultType = Table
+

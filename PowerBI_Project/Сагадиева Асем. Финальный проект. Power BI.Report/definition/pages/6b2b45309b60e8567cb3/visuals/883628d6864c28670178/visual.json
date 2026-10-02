@@ -1,0 +1,672 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "883628d6864c28670178",
+  "position": {
+    "x": 14,
+    "y": 33.555555555555571,
+    "z": 3000,
+    "height": 872,
+    "width": 1546,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Временные ряды",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Всего поездок ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "в районе залива Сан-Франциско",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "1 446 671",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Месяц к месяцу:",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " Для анализа выбран период Октябрь 2017 г. Объём поездок составил 81 177, рост по сравнению с предыдущим месяцем (сентябрем) составил +10,18%). ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Квартал к кварталу:",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "При сравнении 2018 Q1 и 2017 Q4 объём поездок составил 221 360 против 214 046, рост в квартальном исчислении составил +3,42%.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Год к году:",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " За 2017 год суммарный объём поездок по региону составил 519 700. За неполный 2018 год (Q1 - Q2) суммарный объём уже достиг 311 983 поездок. При сопоставлении аналогичных периодов динамика прироста составила +9,79%.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Среднедневной объём поездок:",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " За весь анализируемый период средняя интенсивность использования сервиса проката в целом составила 1 385 поездок в день.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "По объёму поездок:",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " Чаще всего велосипедами пользуются в будние дни (понедельник - пятница). Пик приходится на вторник (349 189 поездок) и среду (345 075 поездок). К концу недели активность снижается, а в выходные падает больше чем в два раза - до 151 146 в субботу и 123 374 в воскресенье. Это показывает, что в будни люди чаще всего берут велосипеды, чтобы доехать до работы или учёбы. ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "По продолжительности: ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "В выходные дни поездки становятся почти в два раза длиннее - в среднем 31,8 минуты в субботу и 31,5 минуты в воскресенье. В рабочие дни поездки короткие - от 13,5 до 16 минут. По будням велосипед используют как быстрый транспорт, а по выходным  - для долгих прогулок и отдыха.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "В рабочие дни",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "(понедельник - пятница): Самый большой поток поездок приходится на утро (06:00 - 12:00) и вечер (17:00 - 22:00). В эти часы совершается от 124 тыс. до 148 тыс. поездок за интервал. Это связано с тем, что люди массово едут на велосипедах на работу/учёбу и возвращаются домой. ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "В выходные дни (суббота и воскресенье): ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Утренний пик исчезает (всего 32-36 тыс. поездок). Основная активность смещается на день (12:00 - 17:00) и вечер (17:00 - 22:00) - около 60-69 тыс. поездок за интервал, так как велосипеды используют в основном для дневных прогулок и отдыха. ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Самый загруженный месяц в Сан-Хосе: ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "апрель (7 963 поездки). На графикe видно, что именно на этот месяц приходится главный пик активности за всё время наблюдений в регионе.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "География",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Самые популярные станции",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " находятся в центре (например, в Сан-Франциско), именно там люди чаще всего берут велосипеды. Всего в базе почти 2 миллиона поездок, а ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "в день в среднем катаются ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "около 1 385 раз. ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "В среднем одна поездка занимает",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " примерно 17 минут — люди быстро добираются из пункта А в пункт Б. ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Идеи",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Меньше всего поездок совершается",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " на станциях - аутсайдерах, расположенных в нижней части правой таблицы (например, ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Oak St at 1st St",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "San Pedro St at Hedding St",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " и др.), где количество поездок исчисляется всего единицами. Также востребованность станции можно посмотреть через метрику \"Эффективность загрузки\", она показывает, насколько полезно работают велосипедные стойки на станции (сколько поездок приходится на доступные места). Эти станции - аутсайдеры можно разгрузить - например, уменьшить там количество велосипедных мест или перенести их в те места, где людям реально не хватает велосипедов.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Самый востребованный маршрут в прокате",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " - это поездки от станции Harry Bridges Plaza (Ferry Building) до станции Embarcadero at Sansome, по нему зафиксировано больше всего поездок (9 150). ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Анализ пользователей",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Общий объем: ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Всего в системе зафиксировано 1 947 417 поездок. Основная доля активности приходится на подписчиков (Subscriber — 983 646 поездок или 50.51%), в то время как разовые пользователи (Customer) совершили 788 609 поездок (40.5% на диаграмме соотношения).",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Гендерный состав: ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Самую крупную категорию на древовидной диаграмме составляют пользователи, которые не указали пол. Это напрямую связано с тем, что разовые клиенты при покупке билетов часто пропускают это поле. Среди тех, кто указал данные, заметно преобладают мужчины, за ними идут женщины, а доля пользователей категории «Другой» минимальна.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Возрастные группы: ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Основная аудитория сервиса сосредоточена в активном трудоспособном возрасте. Главными лидерами по количеству поездок являются группы 36–45 лет и 46–60 лет, что подчеркивает популярность байкшеринга как удобного и регулярного городского транспорта.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "ВЫВОДЫ:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "В ходе выполнения проекта был проведен комплексный анализ данных сервиса проката велосипедов Bay Area Bike Share.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "С помощью временных рядов и анализа сезонности было выявлено, что в будние дни сервис активно используется как ежедневный городской транспорт для поездок на работу и учебу (с утренними и вечерними пиками), в то время как в выходные дни поездки носят прогулочный характер и длятся почти в два раза дольше.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Географический анализ показал высокую концентрацию поездок на центральных станциях Сан-Франциско, а также позволил выявить наименее востребованные станции-аутсайдеры, которые можно оптимизировать путем перераспределения велосипедных стоек.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Изучение пользовательской базы продемонстрировало, что ядро аудитории составляют подписчики и активные работающие граждане в возрасте от 36 до 60 лет, при этом значительная доля поездок совершается анонимно разовыми клиентами, которые не указывают свой пол при покупке билетов.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Полученные выводы и построенные визуализации сформировали целостную, логичную и готовую к защите картину работы транспортной системы.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "785a6960aa0b511219e0"
+}

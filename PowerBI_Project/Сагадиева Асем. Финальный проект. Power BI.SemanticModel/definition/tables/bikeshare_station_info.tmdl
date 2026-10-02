@@ -1,0 +1,98 @@
+table bikeshare_station_info
+	lineageTag: 1e6e696e-ca03-459c-9f12-114ceaa2e63c
+
+	column station_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c788804-b347-4305-98dc-c9f8480cab21
+		summarizeBy: none
+		sourceColumn: station_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 97f701fe-3837-4fb6-a4cb-042470f25326
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column short_name
+		dataType: string
+		lineageTag: e9d013d9-d82c-409b-bf90-ce1ed20b66a2
+		summarizeBy: none
+		sourceColumn: short_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: double
+		lineageTag: e1ce13bc-f1bf-4584-888e-85516dcc1e33
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lon
+		dataType: double
+		lineageTag: 92779a8c-7d60-4898-ae3d-098996a8e084
+		summarizeBy: sum
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 851c2097-305e-4160-b636-b84ebd2588a3
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacity
+		dataType: int64
+		formatString: 0
+		lineageTag: e7ea3031-742d-41cd-928e-4b2e8a436341
+		summarizeBy: sum
+		sourceColumn: capacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_kiosk
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9c38c12f-34f6-4578-aa0b-2e312fb515ef
+		summarizeBy: none
+		sourceColumn: has_kiosk
+
+		annotation SummarizationSetBy = Automatic
+
+	column station_geom
+		dataType: string
+		lineageTag: 2e8be017-1ceb-4a8f-afa9-6fb8370ba084
+		summarizeBy: none
+		sourceColumn: station_geom
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bikeshare_station_info = m
+		mode: import
+		source =
+				let
+				    Источник = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"bigquery-public-data_Database" = Источник{[Name="bigquery-public-data",Kind="Database"]}[Data],
+				    san_francisco_bikeshare_Schema = #"bigquery-public-data_Database"{[Name="san_francisco_bikeshare",Kind="Schema"]}[Data],
+				    bikeshare_station_info_Table = san_francisco_bikeshare_Schema{[Name="bikeshare_station_info",Kind="Table"]}[Data],
+				  #"Измененный тип столбца" = Table.TransformColumnTypes(bikeshare_station_info_Table, {{"station_id", Int64.Type}}),
+				  #"Удаленные столбцы" = Table.RemoveColumns(#"Измененный тип столбца", {"rental_methods", "external_id", "eightd_has_key_dispenser"})
+				in
+				    #"Удаленные столбцы"
+
+	annotation PBI_ResultType = Table
+
